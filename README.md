@@ -15,16 +15,18 @@ Ctrl + Alt + F3 (or F1 until 17.10).
 Use loginctl to view gui sessions details and kill/terminate them
 
 Empty journalctl logs:
+```
 journalctl --rotate --flush
 journalctl --vacuum-time=1s
 rm -rf /var/log
+```
 
-Many configuation options in /etc/, e.g. /etc/(gdm3 | lightdm | xdg)
-More configs in /usr/share, e.g. /usr/share/wayland-sessions
-User configs in ~/.config
+Many configuation options in `/etc/`, e.g. `/etc/(gdm3 | lightdm | xdg)`
+More configs in `/usr/share`, e.g. `/usr/share/wayland-sessions`
+User configs in `~/.config`
 
 https://forums.raspberrypi.com/viewtopic.php?t=294014
-Autostart programs for RPi: /etc/xdg/autostart and ~/.config/autostart
+Autostart programs for RPi: `/etc/xdg/autostart` and `~/.config/autostart`
 
 https://wiki.archlinux.org/title/Plymouth
 Wait for plymooth animation to complete: Create /etc/systemd/system/plymouth-wait-for-animation.service and enable this service
@@ -32,7 +34,7 @@ Wait for plymooth animation to complete: Create /etc/systemd/system/plymouth-wai
 Install gdm3, libpam-gnome-keyring (fix not being able to login after logout)
 
 LXSession setup: https://github.com/lxde/lxsession?tab=readme-ov-file
-LXSession doesn't work with Waylanb
+LXSession doesn't work with Wayland
 
 gnome-session only supports the gnome DE, pain to setup with sway
 
