@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Sway (with UWSM)
+Comment=An i3-compatible Wayland compositor, UWSM session
+Exec=uwsm start -- sway
+Type=Application

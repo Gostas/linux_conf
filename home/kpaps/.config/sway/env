@@ -1,0 +1,8 @@
+XDG_CURRENT_DESKTOP=SWAY
+#XDG_MENU_PREFIX=lxde-pi-
+#XDG_DATA_DIRS=/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:$XDG_DATA_DIRS
+_JAVA_AWT_WM_NONREPARENTING=1
+QT_QPA_PLATFORM=wayland
+QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+BEMENU_BACKEND=wayland
+QT_QPA_PLATFORMTHEME=qt5ct

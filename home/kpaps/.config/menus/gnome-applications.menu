@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<Menu>
+	<Name>Applications</Name>
+	<MergeFile type="parent">/etc/xdg/menus/gnome-applications.menu</MergeFile>
+	<Menu>
+		<Name>Internet</Name>
+		<Exclude>
+			<Filename>dillo.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+		<Exclude>
+			<Filename>minicom.desktop</Filename>
+		</Exclude>
+	</Menu>
+	<Menu>
+		<Name>System</Name>
+		<Exclude>
+			<Filename>footclient.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+		<Exclude>
+			<Filename>foot-server.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>pcmanfm.desktop</Filename>
+		</Exclude>
+	</Menu>
+	<Menu>
+		<Name>Other</Name>
+		<Exclude>
+			<Filename>rp-bookshelf.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+	</Menu>
+	<Menu>
+		<Name>Education</Name>
+		<DirectoryDir>/home/kpaps/.local/share/desktop-directories</DirectoryDir>
+	</Menu>
+	<Layout>
+		<Merge type="menus"/>
+		<Menuname>Development</Menuname>
+		<Menuname>Office</Menuname>
+		<Menuname>Internet</Menuname>
+		<Menuname>Education</Menuname>
+		<Menuname>Games</Menuname>
+		<Menuname>Graphics</Menuname>
+		<Menuname>Accessories</Menuname>
+		<Menuname>Science</Menuname>
+		<Menuname>Multimedia</Menuname>
+		<Menuname>System Settings</Menuname>
+		<Menuname>System</Menuname>
+		<Menuname>Universal Access</Menuname>
+		<Menuname>Utilities</Menuname>
+		<Menuname>Web Applications</Menuname>
+		<Menuname>Other</Menuname>
+		<Merge type="files"/>
+	</Layout>
+	<Menu>
+		<Name>Development</Name>
+		<Layout>
+			<Merge type="menus"/>
+			<Filename>code.desktop</Filename>
+			<Filename>geany.desktop</Filename>
+			<Filename>python3.11.desktop</Filename>
+			<Filename>org.thonny.Thonny.desktop</Filename>
+			<Filename>code-url-handler.desktop</Filename>
+			<Merge type="files"/>
+		</Layout>
+	</Menu>
+</Menu>

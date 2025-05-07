@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<Menu>
+	<Name>Applications</Name>
+	<MergeFile type="parent">/etc/xdg/menus/sway-applications.menu</MergeFile>
+	<Menu>
+		<Name>Accessories</Name>
+		<Exclude>
+			<Filename>uuctl.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+		<Include>
+			<Filename>bluetooth-sendto.desktop</Filename>
+		</Include>
+	</Menu>
+	<Menu>
+		<Name>System</Name>
+		<Exclude>
+			<Filename>org.freedesktop.MalcontentControl.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+		<Include>
+			<Filename>minicom.desktop</Filename>
+		</Include>
+	</Menu>
+	<Menu>
+		<Name>Education</Name>
+		<Exclude>
+			<Filename>org.freecadweb.FreeCAD.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+	</Menu>
+	<Menu>
+		<Name>Graphics</Name>
+		<Include>
+			<Filename>org.freecadweb.FreeCAD.desktop</Filename>
+		</Include>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+	</Menu>
+</Menu>

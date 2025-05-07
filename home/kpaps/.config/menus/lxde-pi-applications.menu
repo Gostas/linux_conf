@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd'>
+<Menu>
+	<Name>Applications</Name>
+	<MergeFile type="parent">/etc/xgd/menus/lxde-pi-applications.menu</MergeFile>
+	<Menu>
+		<Name>Games</Name>
+		<!-- added by LibFM -->
+		<Include>
+			<Filename>Terminal.desktop</Filename>
+		</Include>
+		<!-- added by LibFM -->
+		<Include>
+			<Filename>xonotic.desktop</Filename>
+		</Include>
+	</Menu>
+	<Menu>
+		<Name>Accessories</Name>
+		<Include>
+			<Filename>redshift.desktop</Filename>
+		</Include>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+	</Menu>
+	<Menu>
+		<Name>System</Name>
+		<Exclude>
+			<Filename>org.freedesktop.MalcontentControl.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+	</Menu>
+	<Menu>
+		<Name>DesktopSettings</Name>
+		<Exclude>
+			<Filename>pcmanfm-desktop-pref.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+		<Exclude>
+			<Filename>org.freedesktop.IBus.Setup.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>im-config.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>obconf.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>lxhotkey-gtk.desktop</Filename>
+		</Exclude>
+	</Menu>
+	<Menu>
+		<Name>Development</Name>
+		<Exclude>
+			<Filename>org.thonny.Thonny.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/kpaps/.local/share/applications</AppDir>
+	</Menu>
+</Menu>
