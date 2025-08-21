@@ -39,3 +39,9 @@ LXSession doesn't work with Wayland
 gnome-session only supports the gnome DE, pain to setup with sway
 
 Only uwsm works https://github.com/Vladimir-csp/uwsm
+
+Automatically unlock keyring on login: https://wiki.archlinux.org/title/GNOME/Keyring
+
+https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
+
+For GDM: A session can be disabled by editing the desktop file and adding a line as follows: Hidden=true.

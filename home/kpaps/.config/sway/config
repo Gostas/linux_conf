@@ -1,7 +1,3 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
@@ -23,9 +19,8 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
-exec_always import-gsettings
-exec uwsm app -- wfrespawn wf-panel-pi
-exec uwsm app -- wfrespawn pcmanfm -p LXDE-pi -d --desktop-off
+# says not found
+exec_always /home/kpaps/.config/sway/import-gsettings
 
 bindsym XF86AudioRaiseVolume  exec wfpanelctl volumepulse volu
 bindsym XF86AudioLowerVolume  exec wfpanelctl volumepulse vold
@@ -40,7 +35,6 @@ bindsym XF86AudioPrev         exec playerctl previous
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg /home/kpaps/Pictures/1.png fill
 #
 # Example configuration:
@@ -54,31 +48,17 @@ exec uwsm app -- swaybg -o \* -i /home/kpaps/Pictures/1.png -m fill
 ### Idle configuration
 #
 exec uwsm app -- swayidle -d -w \
-     timeout 360 'swaylock -f -c 000000' \
-     timeout 600 'wlopm --off \*' resume 'wlopm --on \*' \
- 	before-sleep 'swaylock -f -c 000000'
+     timeout 300 'wlopm --off \*' resume 'wlopm --on \*' \
+	 after-resume 'wlopm --on \*' \
+ 	 before-sleep 'swaylock -f -e -F -c 000000' \
+	 lock 'swaylock -f -e -F' \
+	 unlock 'pkill swaylock -SIGUSR1'
 
-# Example configuration:
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+exec uwsm app -- wfrespawn wf-panel-pi
+exec uwsm app -- wfrespawn pcmanfm -p LXDE-pi -d --desktop-off
+exec uwsm app -- wl-paste -t text --watch clipman store --no-persist
 
 ### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
@@ -95,7 +75,7 @@ input "6645:12870:NuPhy_NuPhy_Air75_V2" {
 	# wf-panel menu key
 	bindsym --release Super_L exec wfpanelctl smenu menu
 
-	bindsym Ctrl+Alt+Delete exec pishutdown
+	bindsym Ctrl+Alt+Delete exec pwrkey
 
     # Start a terminal
     bindsym $mod+Return exec $term

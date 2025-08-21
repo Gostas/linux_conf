@@ -12,3 +12,4 @@ application/x-object=geany.desktop;
 application/octet-stream=org.xfce.mousepad.desktop;
 application/x-ipynb+json=code.desktop;
 application/x-gtk-builder=geany.desktop;
+application/pdf=chromium.desktop;
