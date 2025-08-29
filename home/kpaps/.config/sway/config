@@ -41,7 +41,7 @@ bindsym XF86AudioPrev         exec playerctl previous
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 exec uwsm app -- kanshi
-exec uwsm app -- swaybg -o \* -i /home/kpaps/Pictures/1.png -m fill
+exec uwsm app -- swaybg -o \* -i /home/kpaps/Pictures/trixie.png -m fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -54,8 +54,8 @@ exec uwsm app -- swayidle -d -w \
 	 lock 'swaylock -f -e -F' \
 	 unlock 'pkill swaylock -SIGUSR1'
 
-exec uwsm app -- wfrespawn wf-panel-pi
-exec uwsm app -- wfrespawn pcmanfm -p LXDE-pi -d --desktop-off
+exec uwsm app -- wf-panel-pi
+exec uwsm app -- pcmanfm -p LXDE-pi -d --desktop-off
 exec uwsm app -- wl-paste -t text --watch clipman store --no-persist
 
 ### Input configuration

@@ -1,0 +1,22 @@
+window {
+   background-image: url("file:///usr/share/backgrounds/login.png");
+   background-size: cover;
+   background-position: center;
+}
+
+
+box#body {
+	background-color: rgba(50, 50, 50, 0.8);
+	border-radius: 10px;
+	padding: 50px;
+}
+
+label#clock {
+	font: 80px Sans;
+	color: white;
+}
+
+box label {
+	font: 20px Sans;
+	color: rgba(255,255,255,1);
+}
