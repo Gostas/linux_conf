@@ -1,7 +1,9 @@
+workspace 1 output "HDMI-A-1"
+exec kanshi -c /etc/greetd/kanshi-config
 output "*" bg /usr/share/backgrounds/login.png fill
 
 # `-l` activates layer-shell mode. Notice that `swaymsg exit` will run after gtkgreet.
-exec "systemd-cat -t gtkgreet gtkgreet -l -s /etc/greetd/gtkgreet.css; swaymsg exit"
+exec "gtkgreet -l -s /etc/greetd/gtkgreet.css; swaymsg exit"
 
 bindsym Mod4+shift+e exec swaynag \
 	-t warning \

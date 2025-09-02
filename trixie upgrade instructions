@@ -1,0 +1,33 @@
+1. Start with a bookworm image running the desktop under labwc, and make sure it is up to date with all 
+recent changes.
+2. Update the apt configuration for trixie.
+
+In the file /etc/apt/sources.list, change every reference to "bookworm" to "trixie".
+Do the same in every file in /etc/apt/sources.list.d/ - on a clean image, this will only involve the 
+file raspi.list, but if you have added any other repositories to this directory, their list files should 
+also be updated.
+
+3. Run an apt update
+
+4. Upgrade to trixie
+sudo apt purge -y raspberrypi-ui-mods
+sudo apt autoremove -y
+sudo apt full-upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" --purge --auto-remove
+sudo apt install -y rpd-wayland-all rpd-x-all
+
+This line must be entered exactly as above. Make particular note of the plus signs at the end of 
+rpd-wayland-all and rpd-x-all. (For trixie, we have obsoleted the raspberrypi-ui-mods package; this has 
+been replaced with a number of new packages containing configuration information which make the 
+configuration of an image more modular; among other things, these two new packages contain the 
+configuration which used to be in ui-mods, and a trixie image will not be correctly configured without 
+them.)
+
+On a Pi 5 with a fast connection, the trixie upgrade takes approximately 10 minutes to run. While it is 
+running, you will be prompted to ask whether to restart services - answer "yes" to this question; you 
+should not have to interact with the process other than that.
+
+At the end, assuming the process completed without errors, it is worth running a "sync" just to make 
+sure the file system has cleared all its caches, and then reboot. When the desktop comes back, you can 
+confirm that you are now running trixie by opening a terminal and typing "lsb_release -c".
+
+https://www.debian.org/releases/trixie/release-notes/upgrading.en.html

@@ -21,6 +21,7 @@ include /etc/sway/config-vars.d/*
 
 # says not found
 exec_always /home/kpaps/.config/sway/import-gsettings
+default_border pixel
 
 bindsym XF86AudioRaiseVolume  exec wfpanelctl volumepulse volu
 bindsym XF86AudioLowerVolume  exec wfpanelctl volumepulse vold
@@ -40,6 +41,7 @@ bindsym XF86AudioPrev         exec playerctl previous
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
+workspace 1 output "HDMI-A-1"
 exec uwsm app -- kanshi
 exec uwsm app -- swaybg -o \* -i /home/kpaps/Pictures/trixie.png -m fill
 #
@@ -57,6 +59,7 @@ exec uwsm app -- swayidle -d -w \
 exec uwsm app -- wf-panel-pi
 exec uwsm app -- pcmanfm -p LXDE-pi -d --desktop-off
 exec uwsm app -- wl-paste -t text --watch clipman store --no-persist
+exec uwsm app -- wlsunset -l 38.0 -L 23.7 -d 1800
 
 ### Input configuration
 # You can get the names of your inputs by running: swaymsg -t get_inputs
