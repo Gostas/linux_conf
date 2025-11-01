@@ -57,8 +57,8 @@ exec uwsm app -- swayidle -d -w \
 	 unlock 'pkill swaylock -SIGUSR1'
 
 exec uwsm app -- /usr/bin/lxsession-xdg-autostart
-exec uwsm app -- wf-panel-pi
-exec uwsm app -- pcmanfm -d --desktop-off
+exec uwsm app -- /usr/local/bin/lwrespawn wf-panel-pi
+exec uwsm app -- /usr/local/bin/lwrespawn pcmanfm -d --desktop-off
 exec uwsm app -- wl-paste -t text --watch clipman store --no-persist
 exec uwsm app -- wlsunset -l 38.0 -L 23.7 -d 1800
 
@@ -79,7 +79,7 @@ input "6645:12870:NuPhy_NuPhy_Air75_V2" {
 	# wf-panel menu key
 	bindsym --release Super_L exec wfpanelctl smenu menu
 
-	bindsym Ctrl+Alt+Delete exec pwrkey
+	bindsym Ctrl+Alt+Delete exec pishutdown
 
     # Start a terminal
     bindsym $mod+Return exec $term
