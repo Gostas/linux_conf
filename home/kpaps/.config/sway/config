@@ -56,8 +56,9 @@ exec uwsm app -- swayidle -d -w \
 	 lock 'swaylock -f -e -F' \
 	 unlock 'pkill swaylock -SIGUSR1'
 
+exec uwsm app -- /usr/bin/lxsession-xdg-autostart
 exec uwsm app -- wf-panel-pi
-exec uwsm app -- pcmanfm -p LXDE-pi -d --desktop-off
+exec uwsm app -- pcmanfm -d --desktop-off
 exec uwsm app -- wl-paste -t text --watch clipman store --no-persist
 exec uwsm app -- wlsunset -l 38.0 -L 23.7 -d 1800
 
