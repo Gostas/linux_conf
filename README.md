@@ -45,3 +45,11 @@ Automatically unlock keyring on login: https://wiki.archlinux.org/title/GNOME/Ke
 https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
 
 For GDM: A session can be disabled by editing the desktop file and adding a line as follows: Hidden=true.
+
+
+XDG_CURRENT_DESKTOP
+              The current desktop environment. This variable affects items which will be  shown  in  menu://applica‐
+              tions/ folder.
+XDG_MENU_PREFIX
+              The prefix for XDG menu definition XML file. This variable affects layout of items shown in menu://ap‐
+              plications/ folder.
