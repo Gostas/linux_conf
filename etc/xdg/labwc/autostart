@@ -1,3 +1,4 @@
-uwsm app -- wfrespawn /usr/bin/pcmanfm --desktop --profile LXDE-pi &
-uwsm app -- wfrespawn wf-panel-pi &
-uwsm app -- /usr/bin/kanshi &
+/usr/bin/lwrespawn /usr/bin/pcmanfm-pi &
+/usr/bin/lwrespawn /usr/bin/wf-panel-pi &
+/usr/bin/kanshi &
+/usr/bin/lxsession-xdg-autostart

@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Labwc Desktop on Wayland (UWSM)
+Exec=/usr/local/bin/labwc-pi

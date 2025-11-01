@@ -191,8 +191,9 @@
 		<Merge type="files"/>
 		<Merge type="menus"/>
 		<Separator/>
-		<Menuname>DesktopSettings</Menuname>
 		<Menuname>Help</Menuname>
+		<Separator/>
+		<Menuname>DesktopSettings</Menuname>
 	</Layout>
 
 </Menu> <!-- End Applications -->
